@@ -5,9 +5,22 @@ import ReactDOM from "react-dom/client";
 //     id: 'heading'
 // }, 'Welcome Hello')
 
+const Title =  () => {
+    return <h1 id='heading' className="test"> React Title componenent</h1>
+}
+
+
 root = ReactDOM.createRoot(document.getElementById('root'))
 
-const JSXheading = <h1 id='heading'> Welcome to raect</h1>;
+const JSXheading = (<h1 id='heading' className="test">
+     Welcome to raect</h1>);
 root.render(JSXheading); 
 
+//Composite Component
+const HeadingComponent =  () => {
+    return <h1 id='heading' className="test"> React Functional componenent 
+    <Title/>
+    </h1>
+}
 
+root.render(<HeadingComponent/>)
