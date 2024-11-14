@@ -1,45 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client"
-
-
-/*
-AppComponent 
-Header -> Logo & links
-Body -> 
-Search
-Restarent cards - Restarnt card
-Footer ->  copy right and link
-*/ 
-
-const HeaderComponent = () => {
-   return (<div className='header'>
-        <div className="logo-container">
-            <img src='https://play-lh.googleusercontent.com/ebAZ9dy07ZQ5-ahLTQtEPpvWJ5L1hwZGQo7S1qCJNNzXQ9esyqAJIoFbUQcgRgfzTA=w240-h480-rw' id='logo'/>
-        </div>
-       <div className="nav-items">
-        <ul>
-        <li className="nav-item">Home</li>
-        <li className="nav-item">About Us</li>
-        <li className="nav-item">Contact US</li>
-        <li className="nav-item">Cart</li>
-        </ul>
-       </div>
-    </div>);
-}
-
-const BodyComponent = () => {
-    return (
-        <div className="body">
-            <div>Search</div>
-            <div>
-                <RestarentComponent/>
-            </div>
-
-        </div>
-    )
-}
-
-const restaurants = [
+export const restaurants = [
     {
       "resname": "Bavarchi",
       "imgsrc": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/11/4/d5c04608-d1d8-4e7c-8078-2322baa6d056_11107.jpg",
@@ -168,40 +127,3 @@ const restaurants = [
       }
 
   ];
-
-
-const RestarentComponent = () => {
-  return (
-    <div className="ResCard-Container">
-      {restaurants.map((res, index) => (
-        <RestarentCardComponent key ={index} restarunts={res} />
-      ))}
-    </div>
-  );
-};
-
-const RestarentCardComponent = (props) => {
-  // console.log(props)
-debugger
-   const {  cusine, imgsrc, resname, rating  } = props.restarunts;
-   console.log(props)
-    return(
-        <div className="res-card">
-            <img src={imgsrc} className="res-img"></img>
-            <div>{resname}</div>
-            <div>{cusine}</div>
-            <div>{rating}</div>
-        </div>
-    )
-}
-
-const AppLayout = () => {
-   return <div className='app'>
-        <HeaderComponent/>
-        <BodyComponent/>
-    </div>
-}
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppLayout/>)
