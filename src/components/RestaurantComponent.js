@@ -14,10 +14,7 @@ export const RestaurantComponent = () => {
 
 
 export const RestaurantCardComponent = (props) => {
-  // console.log(props)
-debugger
    const {  cusine, imgsrc, resname, rating  } = props.restarunts;
-   console.log(props)
     return(
         <div className="res-card">
             <img src={imgsrc} className="res-img"></img>
