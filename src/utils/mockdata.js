@@ -1,4 +1,5 @@
-export const restaurants = [
+export const restaurants =
+ [
     {
       "resname": "Bavarchi",
       "imgsrc": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/11/4/d5c04608-d1d8-4e7c-8078-2322baa6d056_11107.jpg",
@@ -127,3 +128,6 @@ export const restaurants = [
       }
 
   ];
+
+
+  //https://mocki.io/v1/78bbf66f-af48-48f7-97a0-8e54eeeea26e
