@@ -5,6 +5,7 @@ import ShimmerComponent from "./ShimmerComponent";
 
 const BodyComponent = () => {
   const [listofRestarunts, setListOfRestarunts] = useState([]);
+  const [filteredRestarunts, setfilteredRestarunts] = useState([]);
   const [searchtext, setsearchText] = useState ("");
   
   useEffect(()=>{
@@ -18,6 +19,7 @@ const fetchData = async () => {
   const json = await data.json();
   console.log(json)
   setListOfRestarunts(json)
+  setfilteredRestarunts(json)
 }
 
 
@@ -39,24 +41,24 @@ if(listofRestarunts.length == 0)
                 res.resname.toLowerCase().includes(searchtext.toLowerCase())
             )
 
-            setListOfRestarunts(filteredRestarunts)
+            setfilteredRestarunts(filteredRestarunts)
           }
           }>Search</button>
         </div>
         <button
           className="filter_btn"
           onClick={() => {
-            const filteredList = listofRestarunts.filter(
+            const filteredList = filteredRestarunts.filter(
               (res) => res.rating > 4.6
             );
-            setListOfRestarunts(filteredList);
+            setfilteredRestarunts(filteredList);
           }}
         >
           Top Rated Restaurents
         </button>
       </div>
       <div className="ResCard-Container">
-        {listofRestarunts.map((res, index) => (
+        {filteredRestarunts.map((res, index) => (
           <RestaurantCardComponent key={index} restarunts={res} />
         ))}
       </div>
