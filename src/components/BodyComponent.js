@@ -5,6 +5,7 @@ import ShimmerComponent from "./ShimmerComponent";
 
 const BodyComponent = () => {
   const [listofRestarunts, setListOfRestarunts] = useState([]);
+  const [searchtext, setsearchText] = useState ("");
   
   useEffect(()=>{
     fetchData();
@@ -27,6 +28,21 @@ if(listofRestarunts.length == 0)
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text" value={searchtext} onChange={(e)=> {
+            setsearchText(e.target.value)
+          }}/>
+          <button onClick={ () => {
+
+        
+          const filteredRestarunts = listofRestarunts.filter((res) => 
+                res.resname.toLowerCase().includes(searchtext.toLowerCase())
+            )
+
+            setListOfRestarunts(filteredRestarunts)
+          }
+          }>Search</button>
+        </div>
         <button
           className="filter_btn"
           onClick={() => {

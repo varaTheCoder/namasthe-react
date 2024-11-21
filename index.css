@@ -53,3 +53,13 @@
   width: 200px;
   background-color: #f0f0f0;
 }
+
+.filter {
+  display: flex;
+  margin-top: 10px;
+}
+
+.filter_btn
+{
+  margin-left: 10px;
+}
