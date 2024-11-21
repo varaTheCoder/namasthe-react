@@ -15,12 +15,17 @@ const BodyComponent = () => {
 []);
 
 const fetchData = async () => {
-  const data = await fetch('https://mocki.io/v1/78bbf66f-af48-48f7-97a0-8e54eeeea26e');
+  const data = await fetch(
+    "https://mocki.io/v1/78bbf66f-af48-48f7-97a0-8e54eeeea26e"
+  );
+  //  const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.509078&lng=78.3001221&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
   const json = await data.json();
-  console.log(json)
-  setListOfRestarunts(json)
-  setfilteredRestarunts(json)
-}
+  console.log(json);
+  setListOfRestarunts(json);
+  setfilteredRestarunts(json);
+  //   setListOfRestarunts(json.data.cards[5].card.card.gridElements.infoWithStyle.restarunts)
+  //   setfilteredRestarunts(json.data.cards[5].card.card.gridElements.infoWithStyle.restarunts)
+};
 
 
 if(listofRestarunts.length == 0)

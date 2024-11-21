@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "PS D:\\Lucky_Learnings\\Namasthe_React> git init\r Initialized empty Git repository in D:/Lucky_Learnings/Namasthe_React/.git/\r PS D:\\Lucky_Learnings\\Namasthe_React> git branch -M main\r PS D:\\Lucky_Learnings\\Namasthe_React> git add .\r PS D:\\Lucky_Learnings\\Namasthe_React> git commit -m \"episode-01\"",
   "scripts": {
-    "start" : "parcel index.html", 
-    "build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
   },
   "browsersList": [
     "last 2 chrome versions",
