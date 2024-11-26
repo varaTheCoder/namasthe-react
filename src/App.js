@@ -6,6 +6,7 @@ import { createBrowserRouter , RouterProvider, useRouteError} from "react-router
 import About from "./components/About";
 import Contact from "./components/Contact";
 import ErrorComp from "./components/Error";
+import { Outlet } from "react-router-dom";
 
 /*
 AppComponent 
@@ -24,7 +25,8 @@ Footer ->  copy right and link
 const AppLayout = () => {
    return <div className='app'>
         <HeaderComponent/>
-        <BodyComponent/>
+        <Outlet/>
+        {/* <BodyComponent/> */}
     </div>
 }
 
@@ -33,17 +35,24 @@ const appRouter = createBrowserRouter([
     {
         path : '/',
         element : <AppLayout/>,
-        errorElement : <ErrorComp/>
+        errorElement : <ErrorComp/>,
+        children : [
+            {
+                path : '/',
+                element : <BodyComponent />
+            },
+            {
+                path : '/About',
+                element : <About />
+            },
+            {
+                path : '/Contact',
+                element : <Contact />
+            }
+        ]
 
     },
-    {
-        path : '/About',
-        element : <About />
-    },
-    {
-        path : '/Contact',
-        element : <Contact />
-    }
+   
 
 ])
  
