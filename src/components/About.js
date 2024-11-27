@@ -37,11 +37,11 @@ class About extends React.Component {
           contact="varabtech08"
         />
 
-        <UserClass
+        {/* <UserClass
           name="varalaskhmi2"
           location="Hyderabad"
           contact="varabtech08"
-        />
+        /> */}
       </>
     );
   }
