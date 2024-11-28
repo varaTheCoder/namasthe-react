@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense, fallback } from "react";
 import ReactDOM from "react-dom/client"
 import HeaderComponent from "./components/HeaderComponent";
 import BodyComponent from "./components/BodyComponent";
@@ -8,6 +8,11 @@ import Contact from "./components/Contact";
 import ErrorComp from "./components/Error";
 import { Outlet } from "react-router-dom";
 import RestaruntMenu from "./components/RestaruntMenu";
+//import Grocery from "./components/Grocery";
+
+//Lazy loading and code splitting
+
+const Grocery = React.lazy(() => import('./components/Grocery'));
 
 /*
 AppComponent 
@@ -49,6 +54,12 @@ const appRouter = createBrowserRouter([
             {
                 path : '/Contact',
                 element : <Contact />
+            },
+            {
+                path : '/Grocery',
+                element : <Suspense fallback={<div>Loading...</div>}>
+                <Grocery />
+              </Suspense>
             },
             {
                 path : '/RestaruntMenu/:id',

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 //Custom hook to fetch the data (Single responsibility Principle)
 
 const useRestaruntMenu = () => {

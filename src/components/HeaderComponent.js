@@ -13,7 +13,7 @@ const HeaderComponent = () => {
          </div>
         <div className="nav-items">
          <ul>
-         <li className="nav-item">onlineStatus
+         <li className="nav-item">online Status
          { onlineStatus ? "💚" : "🧡" }
          </li>
          <li className="nav-item">
@@ -24,6 +24,8 @@ const HeaderComponent = () => {
          </li>
          <li className="nav-item">
          <Link to='/contact'> Contact Us</Link></li>
+         <li className="nav-item">
+         <Link to='/grocery'> Grocery </Link></li>
          <li className="nav-item">Cart</li>
          <li><button className="btn_login" onClick={() => {
            btnName == 'Login' ? setbtnName('Logout') :  setbtnName('Login');
