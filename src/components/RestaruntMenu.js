@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import useRestaruntMenu from "../utils/useRestaruntMenu"
 
 const RestaruntMenu = () => {
   let params = useParams();
 
   let resName = params.id;
+
+  let data = useRestaruntMenu(resName);
 
   console.log(resName);
   return (
