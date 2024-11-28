@@ -13,8 +13,8 @@ const HeaderComponent = () => {
          </div>
         <div className="nav-items">
          <ul>
-         <li className="nav-item">
-         { onlineStatus ? <span>💚</span> : <span> 🧡</span> }
+         <li className="nav-item">onlineStatus
+         { onlineStatus ? "💚" : "🧡" }
          </li>
          <li className="nav-item">
           <Link to='/'>Home</Link>
