@@ -4,13 +4,15 @@ export const restaurants =
       "resname": "Bavarchi",
       "imgsrc": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/11/4/d5c04608-d1d8-4e7c-8078-2322baa6d056_11107.jpg",
       "cusine": "Indian",
-      "rating": "4.4"
+      "rating": "4.4",
+      "promoted": true
     },
     {
       "resname": "The Italian Kitchen",
       "imgsrc": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/xvk2jlbijyejf09fdqkp",
       "cusine": "Italian",
-      "rating": "4.7"
+      "rating": "4.7",
+      "promoted": true
     },
     {
       "resname": "Sushi World",

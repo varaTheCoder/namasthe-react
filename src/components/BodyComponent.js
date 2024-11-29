@@ -1,4 +1,4 @@
-import { RestaurantCardComponent } from "./RestaurantComponent";
+import { RestaurantCardComponent ,withPromotedLabel} from "./RestaurantComponent";
 //import { restaurants } from "../utils/mockdata";
 import { useState, useEffect } from "react";
 import ShimmerComponent from "./ShimmerComponent";
@@ -9,6 +9,7 @@ const BodyComponent = () => {
   const [listofRestarunts, setListOfRestarunts] = useState([]);
   const [filteredRestarunts, setfilteredRestarunts] = useState([]);
   const [searchtext, setsearchText] = useState ("");
+  const PromotedRestaruntCard = withPromotedLabel(RestaurantCardComponent);
   
   useEffect(()=>{
     fetchData();
@@ -69,7 +70,12 @@ else
       </div>
       <div className="ResCard-Container flex flex-wrap">
         {filteredRestarunts.map((res, index) => (
-         <Link to={'/RestaruntMenu/'+res.resname}> <RestaurantCardComponent key={index} restarunts={res} /> </Link>
+         <Link to={'/RestaruntMenu/'+res.resname}> 
+         {
+          res.resname.includes('Bavarchi')?<PromotedRestaruntCard restarunts={res} /> :<RestaurantCardComponent key={index} restarunts={res} /> 
+         }
+         
+        </Link>
         ))}
       </div>
     </div>
