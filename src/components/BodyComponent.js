@@ -38,12 +38,12 @@ if(!onlineStatus)
 else
   return (
     <div className="body">
-      <div className="filter">
-        <div className="search">
-          <input type="text" value={searchtext} onChange={(e)=> {
+      <div className="filter flex">
+        <div className="search m-4 p-4">
+          <input type="text" className="border border-solid border-black" value={searchtext} onChange={(e)=> {
             setsearchText(e.target.value)
           }}/>
-          <button onClick={ () => {
+          <button className="px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={ () => {
 
         
           const filteredRestarunts = listofRestarunts.filter((res) => 
@@ -54,8 +54,8 @@ else
           }
           }>Search</button>
         </div>
-        <button
-          className="filter_btn"
+        <div className="m-4 p-4 ">  <button
+          className="px-4 py-2 bg-gray-100 m-4 rounded-lg"
           onClick={() => {
             const filteredList = filteredRestarunts.filter(
               (res) => res.rating > 4.6
@@ -64,9 +64,10 @@ else
           }}
         >
           Top Rated Restaurents
-        </button>
+        </button></div>
+      
       </div>
-      <div className="ResCard-Container">
+      <div className="ResCard-Container flex flex-wrap">
         {filteredRestarunts.map((res, index) => (
          <Link to={'/RestaruntMenu/'+res.resname}> <RestaurantCardComponent key={index} restarunts={res} /> </Link>
         ))}

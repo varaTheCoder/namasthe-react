@@ -16,9 +16,9 @@ export const RestaurantComponent = () => {
 export const RestaurantCardComponent = (props) => {
    const {  cusine, imgsrc, resname, rating  } = props.restarunts;
     return(
-        <div className="res-card">
-            <img src={imgsrc} className="res-img"></img>
-            <div>{resname}</div>
+        <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+            <img src={imgsrc} className="res-img rounded-lg"></img>
+            <div className="font-bold py-4 text-xl">{resname}</div>
             <div>{cusine}</div>
             <div>{rating}</div>
         </div>
