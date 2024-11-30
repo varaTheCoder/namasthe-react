@@ -74,7 +74,7 @@ else
       </div>
       <div className="ResCard-Container flex flex-wrap">
         {filteredRestarunts.map((res, index) => (
-         <Link to={'/RestaruntMenu/'+res.resname}> 
+         <Link to={'/RestaruntMenu/'+ res.info.id }> 
          {
          res.info.name.includes('Bavarchi')?<PromotedRestaruntCard restarunts={res} /> :<RestaurantCardComponent key={index} restarunts={res} /> 
          }

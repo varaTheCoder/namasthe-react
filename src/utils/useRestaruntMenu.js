@@ -1,16 +1,20 @@
 import { useEffect } from "react";
+import { resMenu } from "./mockRestaruntMenu";
 //Custom hook to fetch the data (Single responsibility Principle)
 
-const useRestaruntMenu = () => {
+const useRestaruntMenu = (props) => {
+    let {resId} = props;
     useEffect(() => {
         fetchData();
       });
     
       let fetchData = async () => {
-        const data = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.509078&lng=78.3001221&restaurantId=11107&catalog_qa=undefined&submitAction=ENTER', {
+        const data = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.509078&lng=78.3001221&restaurantId='+resId, {
           mode: 'no-cors',
       })    
       }
+
+      return resMenu;
       
 }
 

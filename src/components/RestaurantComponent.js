@@ -1,4 +1,5 @@
 import { Img_src } from "../utils/constants";
+
 // import { restaurants } from "../utils/mockdata";
 
 // export const RestaurantComponent = () => {
