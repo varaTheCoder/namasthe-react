@@ -18,14 +18,18 @@ const BodyComponent = () => {
 []);
 
 const fetchData = async () => {
-  const data = await fetch(
-    "https://mocki.io/v1/78bbf66f-af48-48f7-97a0-8e54eeeea26e"
-  );
+  // const data = await fetch(
+  //   "https://mocki.io/v1/78bbf66f-af48-48f7-97a0-8e54eeeea26e"
+  // );
   //  const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.509078&lng=78.3001221&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
+  
+  const data = await fetch('https://mocki.io/v1/7522322e-c2fb-4ea6-90ae-cbd84d595c67');
   const json = await data.json();
   console.log(json);
-  setListOfRestarunts(json);
-  setfilteredRestarunts(json);
+  const RestaruntData =  json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants;
+  debugger
+  setListOfRestarunts(RestaruntData);
+  setfilteredRestarunts(RestaruntData);
   //   setListOfRestarunts(json.data.cards[5].card.card.gridElements.infoWithStyle.restarunts)
   //   setfilteredRestarunts(json.data.cards[5].card.card.gridElements.infoWithStyle.restarunts)
 };
@@ -48,7 +52,7 @@ else
 
         
           const filteredRestarunts = listofRestarunts.filter((res) => 
-                res.resname.toLowerCase().includes(searchtext.toLowerCase())
+                res.info.name.toLowerCase().includes(searchtext.toLowerCase())
             )
 
             setfilteredRestarunts(filteredRestarunts)
@@ -59,7 +63,7 @@ else
           className="px-4 py-2 bg-gray-100 m-4 rounded-lg"
           onClick={() => {
             const filteredList = filteredRestarunts.filter(
-              (res) => res.rating > 4.6
+              (res) => res.info.avgRating > 4.3
             );
             setfilteredRestarunts(filteredList);
           }}
@@ -72,7 +76,7 @@ else
         {filteredRestarunts.map((res, index) => (
          <Link to={'/RestaruntMenu/'+res.resname}> 
          {
-          res.resname.includes('Bavarchi')?<PromotedRestaruntCard restarunts={res} /> :<RestaurantCardComponent key={index} restarunts={res} /> 
+         res.info.name.includes('Bavarchi')?<PromotedRestaruntCard restarunts={res} /> :<RestaurantCardComponent key={index} restarunts={res} /> 
          }
          
         </Link>

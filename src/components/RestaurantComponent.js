@@ -1,3 +1,4 @@
+import { Img_src } from "../utils/constants";
 // import { restaurants } from "../utils/mockdata";
 
 // export const RestaurantComponent = () => {
@@ -14,13 +15,13 @@
 
 
 export const RestaurantCardComponent = (props) => {
-   const {  cusine, imgsrc, resname, rating, promoted  } = props.restarunts;
+   const {  cuisines, cloudinaryImageId, name, avgRating, type  } = props.restarunts.info;
     return(
         <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
-            <img src={imgsrc} className="res-img rounded-lg"></img>
-            <div className="font-bold py-4 text-xl">{resname}</div>
-            <div>{cusine}</div>
-            <div>{rating}</div>
+            <img src={Img_src + cloudinaryImageId} className="res-img rounded-lg"></img>
+            <div className="font-bold py-4 text-xl">{name}</div>
+            <div>{cuisines.join(',')}</div>
+            <div>{avgRating}</div>
         </div>
     )
 }
