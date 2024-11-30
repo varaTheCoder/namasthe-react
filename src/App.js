@@ -8,6 +8,9 @@ import Contact from "./components/Contact";
 import ErrorComp from "./components/Error";
 import { Outlet } from "react-router-dom";
 import RestaruntMenu from "./components/RestaruntMenu";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 //import Grocery from "./components/Grocery";
 
 //Lazy loading and code splitting
@@ -30,8 +33,10 @@ Footer ->  copy right and link
 
 const AppLayout = () => {
    return <div className='app'>
+    <Provider store={appStore} >
         <HeaderComponent/>
         <Outlet/>
+        </Provider>
         {/* <BodyComponent/> */}
     </div>
 }
@@ -64,6 +69,10 @@ const appRouter = createBrowserRouter([
             {
                 path : '/RestaruntMenu/:id',
                 element : <RestaruntMenu />
+            },
+            {
+                path : '/Cart',
+                element : <Cart />
             }
         ]
 
