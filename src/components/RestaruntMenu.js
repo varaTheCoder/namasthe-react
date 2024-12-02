@@ -14,6 +14,7 @@ const RestaruntMenu = () => {
 
   const [showIndex, setShowIndex] = useState(0);
 
+  console.log(resInfo)
   if (resInfo == null) return <shimmer />;
 
   const { name, cusines, costForTwoMessage } =
