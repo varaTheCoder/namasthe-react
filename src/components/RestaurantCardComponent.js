@@ -16,7 +16,10 @@ import { Img_src } from "../utils/constants";
 
 
 export const RestaurantCardComponent = (props) => {
-   const {  cuisines, cloudinaryImageId, name, avgRating, type  } = props.restarunts.info;
+  debugger
+  console.log(props)
+  let {restarunts} = props;
+   const {  cuisines, cloudinaryImageId, name, avgRating, type  } = restarunts;
     return(
         <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
             <img src={Img_src + cloudinaryImageId} className="res-img rounded-lg"></img>

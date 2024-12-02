@@ -1,4 +1,4 @@
-import { RestaurantCardComponent ,withPromotedLabel} from "./RestaurantComponent";
+import { RestaurantCardComponent ,withPromotedLabel} from "./RestaurantCardComponent";
 //import { restaurants } from "../utils/mockdata";
 import { useState, useEffect } from "react";
 import ShimmerComponent from "./ShimmerComponent";
@@ -76,7 +76,7 @@ else
         {filteredRestarunts.map((res, index) => (
          <Link to={'/RestaruntMenu/'+ res.info.id }> 
          {
-         res.info.name.includes('Bavarchi')?<PromotedRestaruntCard restarunts={res} /> :<RestaurantCardComponent key={index} restarunts={res} /> 
+         res.info.name.includes('Bavarchi')?<PromotedRestaruntCard restarunts={res.info} /> :<RestaurantCardComponent key={index} restarunts={res.info} /> 
          }
          
         </Link>
