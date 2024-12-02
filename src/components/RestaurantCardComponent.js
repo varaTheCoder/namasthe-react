@@ -21,7 +21,7 @@ export const RestaurantCardComponent = (props) => {
   let {restarunts} = props;
    const {  cuisines, cloudinaryImageId, name, avgRating, type  } = restarunts;
     return(
-        <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+        <div data-testid="resCard" className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
             <img src={Img_src + cloudinaryImageId} className="res-img rounded-lg"></img>
             <div className="font-bold py-4 text-xl">{name}</div>
             <div>{cuisines.join(',')}</div>
