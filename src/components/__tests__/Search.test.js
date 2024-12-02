@@ -31,3 +31,19 @@ it('Should search Restarunt list for Pizza',async()=> {
     //expect(searhBtn).toBeInTheDocument();
   
 })
+
+
+
+it('Should filter top rated Restarunts list',async()=> {
+    await act(async() =>   render(<BrowserRouter><BodyComponent/></BrowserRouter>));
+
+    const cardBeforSearch = screen.getAllByTestId("resCard")
+    expect(cardBeforSearch.length).toBe(8)
+
+    const topratedBtn = screen.getByRole("button", {name : "Top Rated Restaurents"});
+    fireEvent.click(topratedBtn)
+
+    const cardsAfterFilter = screen.getAllByTestId("resCard")
+    expect(cardsAfterFilter.length).toBe(2)
+  
+})

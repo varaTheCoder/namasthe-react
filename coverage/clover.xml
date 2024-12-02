@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733103116504" clover="3.2.0">
-  <project timestamp="1733103116504" name="All files">
-    <metrics statements="65" coveredstatements="55" conditionals="10" coveredconditionals="6" methods="24" coveredmethods="16" elements="99" coveredelements="77" complexity="0" loc="65" ncloc="65" packages="2" files="10" classes="10"/>
+<coverage generated="1733114380341" clover="3.2.0">
+  <project timestamp="1733114380341" name="All files">
+    <metrics statements="65" coveredstatements="58" conditionals="10" coveredconditionals="6" methods="24" coveredmethods="18" elements="99" coveredelements="82" complexity="0" loc="65" ncloc="65" packages="2" files="10" classes="10"/>
     <package name="components">
-      <metrics statements="50" coveredstatements="45" conditionals="10" coveredconditionals="6" methods="18" coveredmethods="15"/>
+      <metrics statements="50" coveredstatements="48" conditionals="10" coveredconditionals="6" methods="18" coveredmethods="17"/>
       <file name="BodyComponent.js" path="D:\Lucky_Learnings\Namasthe_React\src\components\BodyComponent.js">
-        <metrics statements="29" coveredstatements="25" conditionals="6" coveredconditionals="4" methods="9" coveredmethods="7"/>
+        <metrics statements="29" coveredstatements="28" conditionals="6" coveredconditionals="4" methods="9" coveredmethods="9"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="37" count="4" type="stmt"/>
-        <line num="39" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="37" count="7" type="stmt"/>
+        <line num="39" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="5" type="cond" truecount="1" falsecount="1"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="44" count="3" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
         <line num="55" count="8" type="stmt"/>
         <line num="58" count="1" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="77" count="17" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="8" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="77" count="27" type="stmt"/>
       </file>
       <file name="Contact.js" path="D:\Lucky_Learnings\Namasthe_React\src\components\Contact.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -53,19 +53,19 @@
       <file name="RestaurantCardComponent.js" path="D:\Lucky_Learnings\Namasthe_React\src\components\RestaurantCardComponent.js">
         <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="19" count="18" type="stmt"/>
-        <line num="20" count="18" type="stmt"/>
-        <line num="21" count="18" type="stmt"/>
-        <line num="22" count="18" type="stmt"/>
-        <line num="23" count="18" type="stmt"/>
+        <line num="19" count="28" type="stmt"/>
+        <line num="20" count="28" type="stmt"/>
+        <line num="21" count="28" type="stmt"/>
+        <line num="22" count="28" type="stmt"/>
+        <line num="23" count="28" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
-        <line num="36" count="4" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
       </file>
       <file name="ShimmerComponent.js" path="D:\Lucky_Learnings\Namasthe_React\src\components\ShimmerComponent.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
       <file name="sum.js" path="D:\Lucky_Learnings\Namasthe_React\src\components\sum.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -95,12 +95,12 @@
       <file name="useOnlineStatus.js" path="D:\Lucky_Learnings\Namasthe_React\src\utils\useOnlineStatus.js">
         <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
       </file>
     </package>
   </project>
